@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joys Boum Mben — Portfolio</title>
+
+  <!--
+    LIEN VERS LES POLICES GOOGLE FONTS
+    Ces deux lignes chargent les polices depuis internet.
+    Tu as besoin d'une connexion pour qu'elles s'affichent.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!--
+    LIEN VERS TON FICHIER CSS
+    Le href="style.css" dit au navigateur d'aller chercher
+    le fichier style.css dans le même dossier que index.html.
+  -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+    <div id="curseur-point"></div>
+    <div id="curseur-cercle"></div>
+  <!-- ============================================
+       NAVIGATION FIXE
+       Elle reste visible en haut même en défilant.
+  ============================================= -->
+  <nav aria-label="Navigation principale">
+    <!-- Logo : les initiales JBM -->
+    <a class="nav-logo" href="#hero">JBM</a>
+
+    <!-- Liste des liens vers chaque section -->
+    <!-- href="#a-propos" = lien vers la section avec id="a-propos" -->
+    <ul class="nav-liens" role="list">
+      <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================
+       SECTION HERO — Premier écran
+       C'est la première chose visible quand on arrive.
+  ============================================= -->
+  <section id="hero" class="hero" aria-label="Introduction">
+    <div class="hero-contenu">
+
+      <!-- Petit badge en pilule en haut -->
+      <div class="hero-badge">✦ Disponible pour des opportunités</div>
+
+      <!-- Ton nom — le <span> met "Joys" en rose via CSS -->
+      <h1 class="hero-titre">
+        <span>Joys</span> Boum Mben
+      </h1>
+
+      <!-- Phrase d'accroche -->
+      <p class="hero-sous-titre">
+        Étudiante en génie informatique · IUT · Passionnée par le code &amp; le design
+      </p>
+
+      <!-- Deux boutons d'action -->
+      <div class="hero-boutons">
+        <a href="#projets" class="btn-principal">Voir mes projets</a>
+        <a href="#contact" class="btn-secondaire">Me contacter</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION À PROPOS
+  ============================================= -->
+  <section id="a-propos" aria-labelledby="titre-apropos">
+    <div class="conteneur">
+
+      <!-- En-tête de la section -->
+      <div class="section-entete animer-entree">
+        <span class="section-label">Qui suis-je ?</span>
+        <h2 class="section-titre" id="titre-apropos">À propos de moi</h2>
+      </div>
+
+      <!-- Grille : photo à gauche, texte à droite -->
+      <div class="apropos-grille">
+
+        <!-- BLOC PHOTO -->
+        <!--
+          Pour remplacer le placeholder par ta vraie photo :
+          1. Mets ta photo dans le dossier mon-portfolio/
+          2. Remplace le <div class="photo-profil"> par :
+             <img src="ma-photo.jpg" alt="Joys Boum Mben" class="photo-profil">
+        -->
+       <div class="photo-conteneur animer-entree">
+         <img
+           src="image/photo.jpg"
+           alt="Joys Boum Mben"
+           class="photo-profil"
+         />
+      </div>
+
+        <!-- BLOC TEXTE -->
+        <div class="apropos-texte animer-entree delai-2">
+          <h3>Bonjour, je suis Joys 👋</h3>
+
+          <p>
+            Étudiante en génie informatique, passionnée par l'intersection entre
+            le code et le design. Mon objectif : devenir développeuse fullstack,
+            avec une sensibilité particulière pour l'UX design. J'aime créer des
+            interfaces qui ne sont pas seulement fonctionnelles, mais réellement
+            pensées pour l'humain qui les utilise.
+          </p>
+
+          <!-- Petites infos clés -->
+          <div class="apropos-infos">
+            <div class="apropos-info-item">Institut Universitaire de Technologie</div>
+            <div class="apropos-info-item">1ère année — Génie Informatique</div>
+            <div class="apropos-info-item">Développeuse fullstack en devenir</div>
+          </div>
+
+          <a href="#contact" class="btn-principal">Discutons ensemble</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION COMPÉTENCES
+  ============================================= -->
+  <section id="competences" aria-labelledby="titre-competences">
+    <div class="conteneur">
+
+      <div class="section-entete animer-entree">
+        <span class="section-label competences-label">Ce que je sais faire</span>
+        <h2 class="section-titre competences-titre" id="titre-competences">Mes compétences</h2>
+      </div>
+
+      <!--
+        Pour AJOUTER une compétence :
+        copie un bloc <div class="competence-carte"> et modifie l'icône, le nom et la description.
+      -->
+    <div class="competences-grille">
+
+  <div class="competence-carte animer-entree delai-1">
+    <span class="competence-icone" aria-hidden="true">🌐</span>
+    <p class="competence-nom">HTML</p>
+    <p class="competence-desc">Structure et sémantique des pages web</p>
+    <!-- data-pourcentage = valeur lue par JavaScript pour animer la barre -->
+    <div class="competence-barre-conteneur">
+      <div class="competence-barre" data-pourcentage="95"></div>
+    </div>
+    <span class="competence-pourcent">95%</span>
+  </div>
+
+  <div class="competence-carte animer-entree delai-2">
+    <span class="competence-icone" aria-hidden="true">🎨</span>
+    <p class="competence-nom">CSS</p>
+    <p class="competence-desc">Mise en forme, animations, responsive</p>
+    <div class="competence-barre-conteneur">
+      <div class="competence-barre" data-pourcentage="50"></div>
+    </div>
+    <span class="competence-pourcent">50%</span>
+  </div>
+
+  <div class="competence-carte animer-entree delai-3">
+    <span class="competence-icone" aria-hidden="true">⚡</span>
+    <p class="competence-nom">JavaScript</p>
+    <p class="competence-desc">Interactivité, logique côté client</p>
+    <div class="competence-barre-conteneur">
+      <div class="competence-barre" data-pourcentage="25"></div>
+    </div>
+    <span class="competence-pourcent">25%</span>
+  </div>
+
+  <div class="competence-carte animer-entree delai-4">
+    <span class="competence-icone" aria-hidden="true">✏️</span>
+    <p class="competence-nom">Figma</p>
+    <p class="competence-desc">Maquettes UI, prototypage, design system</p>
+    <div class="competence-barre-conteneur">
+      <div class="competence-barre" data-pourcentage="85"></div>
+    </div>
+    <span class="competence-pourcent">85%</span>
+  </div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SECTION PROJETS
+  ============================================= -->
+  <section id="projets" aria-labelledby="titre-projets">
+    <div class="conteneur">
+
+      <div class="section-entete animer-entree">
+        <span class="section-label">Ce que j'ai construit</span>
+        <h2 class="section-titre" id="titre-projets">Mes projets</h2>
+      </div>
+
+      <!--
+        Chaque <article class="projet-carte"> s'ouvre en modale au clic.
+        Les attributs data-* stockent les infos affichées dans la modale :
+          data-titre     = titre affiché dans la modale
+          data-desc      = description longue
+          data-lien      = URL du projet (remplace # par le vrai lien)
+          data-lien-texte= texte du bouton
+          data-tags      = liste séparée par des virgules
+      -->
+      <div class="projets-grille">
+
+        <!-- PROJET 1 — CinéTicket -->
+        <article
+          class="projet-carte animer-entree delai-1"
+          role="button"
+          tabindex="0"
+          aria-label="Voir le projet CinéTicket"
+          data-titre="CinéTicket"
+          data-desc="Maquette Figma complète d'un système de réservation de cinéma. Conception de l'interface utilisateur avec une attention particulière à l'expérience d'achat de billets : sélection de films, choix des places, récapitulatif de commande. Travail sur l'Auto Layout, les composants réutilisables et le design system."
+          data-lien="https://www.figma.com/design/fniaLOJQsfMTDGoAZoO1bU/cinema?node-id=0-1&t=nb4x6i3y2TqeJiO6-1"
+          data-lien-texte="Ouvrir la maquette Figma ↗"
+          data-tags="Figma,UI/UX,Prototypage"
+        >
+          <div class="projet-bandeau rose" aria-hidden="true">🎬</div>
+          <div class="projet-corps">
+            <div class="projet-tags">
+              <span class="projet-tag">Figma</span>
+              <span class="projet-tag">UI/UX</span>
+              <span class="projet-tag">Prototypage</span>
+            </div>
+            <h3 class="projet-titre">CinéTicket</h3>
+            <p class="projet-desc">Maquette Figma d'un système de réservation de cinéma, avec design system et composants réutilisables.</p>
+            <span class="projet-lien" aria-hidden="true">Voir le projet →</span>
+          </div>
+        </article>
+
+        <!-- PROJET 2 — Graphes Python -->
+        <article
+          class="projet-carte animer-entree delai-2"
+          role="button"
+          tabindex="0"
+          aria-label="Voir le projet Analyse de match"
+          data-titre="Analyse Osasuna vs FC Barcelone"
+          data-desc="Analyse d'un match de football réel à travers la théorie des graphes. Visualisation des passes, connexions entre joueurs et statistiques de jeu grâce à NetworkX et Matplotlib en Python. Interface graphique avec Tkinter."
+          data-lien="#"
+          data-lien-texte="Voir sur GitHub"
+          data-tags="Python,NetworkX,Matplotlib,Tkinter"
+        >
+          <div class="projet-bandeau sombre" aria-hidden="true">⚽</div>
+          <div class="projet-corps">
+            <div class="projet-tags">
+              <span class="projet-tag">Python</span>
+              <span class="projet-tag">NetworkX</span>
+              <span class="projet-tag">Graphes</span>
+            </div>
+            <h3 class="projet-titre">Analyse de match — Graphes</h3>
+            <p class="projet-desc">Visualisation d'un match de football (Osasuna vs Barça) avec la théorie des graphes en Python.</p>
+            <span class="projet-lien" aria-hidden="true">Voir le projet →</span>
+          </div>
+        </article>
+
+        <!-- PROJET 3 — Flask -->
+        <article
+          class="projet-carte animer-entree delai-3"
+          role="button"
+          tabindex="0"
+          aria-label="Voir le projet Flask"
+          data-titre="Application Flask — Abonnements"
+          data-desc="Application web développée avec Flask et SQLite pour afficher des statistiques d'abonnés par subdivision géographique. Requêtes SQL, interface dynamique et déploiement local."
+          data-lien="#"
+          data-lien-texte="Voir sur GitHub"
+          data-tags="Flask,Python,SQLite,SQL"
+        >
+          <div class="projet-bandeau miel" aria-hidden="true">🗄️</div>
+          <div class="projet-corps">
+            <div class="projet-tags">
+              <span class="projet-tag">Flask</span>
+              <span class="projet-tag">Python</span>
+              <span class="projet-tag">SQL</span>
+            </div>
+            <h3 class="projet-titre">App Flask — Abonnements</h3>
+            <p class="projet-desc">Application web Flask + SQLite affichant des statistiques d'abonnés par zone géographique.</p>
+            <span class="projet-lien" aria-hidden="true">Voir le projet →</span>
+          </div>
+        </article>
+
+       <!-- PROJET 4 — Petal d'Or -->
+        <article
+            class="projet-carte animer-entree delai-4"
+            role="button"
+            tabindex="0"
+            aria-label="Voir le projet Petal d'Or"
+            data-titre="Pétale d'Or — Boutique en ligne"
+            data-desc="Site e-commerce conçu et développé en HTML, CSS et JavaScript. Projet de vente en ligne avec une identité visuelle florale et élégante, versionné sur GitHub."
+            data-lien="https://github.com/ornelle8/Petal-d_or"
+            data-lien-texte="Voir sur GitHub ↗"
+            data-tags="HTML,CSS,JavaScript,GitHub"
+        >
+            <div class="projet-bandeau miel" aria-hidden="true">🌸</div>
+            <div class="projet-corps">
+            <div class="projet-tags">
+            <span class="projet-tag">HTML</span>
+            <span class="projet-tag">CSS</span>
+            <span class="projet-tag">JavaScript</span>
+            </div>
+            <h3 class="projet-titre">Pétale d'Or</h3>
+            </P>Boutique en ligne "Pétale d'Or", identité florale et élégante, développée en HTML/CSS/JS.</P>
+            <span class="projet-lien" aria-hidden="true">Voir sur GitHub →</span>
+            </div>
+        </article> 
+    </div>
+  </section>
+
+  <!-- ============================================
+       MODALE — Popup détail projet
+       Cachée par défaut, JavaScript la rend visible.
+  ============================================= -->
+  <div
+    class="modale-overlay"
+    id="modale"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modale-titre-texte"
+    aria-hidden="true"
+  >
+    <div class="modale-boite">
+      <div class="modale-entete">
+        <!-- Titre rempli par JavaScript -->
+        <h3 class="modale-titre" id="modale-titre-texte"></h3>
+        <button class="modale-fermer" id="modale-fermer" aria-label="Fermer">×</button>
+      </div>
+      <div class="modale-corps">
+        <!-- Contenu rempli par JavaScript -->
+        <p id="modale-desc"></p>
+        <div id="modale-tags" class="projet-tags"></div>
+        <a id="modale-lien" href="#" class="btn-principal" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SECTION CONTACT
+  ============================================= -->
+  <section id="contact" aria-labelledby="titre-contact">
+    <div class="conteneur">
+
+      <div class="section-entete animer-entree">
+        <span class="section-label">Travaillons ensemble</span>
+        <h2 class="section-titre" id="titre-contact">Me contacter</h2>
+      </div>
+
+      <p class="contact-intro animer-entree">
+        Tu as un projet, une question ou une opportunité ?
+        N'hésite pas à m'écrire, je réponds avec plaisir.
+      </p>
+
+      href="mailto:joycetifanieboummben@gmail.com"
+      class="contact-email animer-entree"
+      aria-label="Envoyer un email à Joys Boum Mben"
+>
+      <div class="contact-email-icone">✉️</div>
+      <span class="contact-email-texte">joycetifanieboummben@gmail.com</span>
+</a>
+  </section>
+
+  <!-- ============================================
+       PIED DE PAGE
+  ============================================= -->
+  <footer>
+    <p>Conçu &amp; développé avec <span>♥</span> par Joys Boum Mben &mdash; 2026</p>
+  </footer>
+
+  <!--
+    LIEN VERS TON FICHIER JAVASCRIPT
+    Placé tout en bas du <body> pour que le HTML soit
+    entièrement chargé avant que le JS s'exécute.
+  -->
+  <script src="script.js"></script>
+
+</body>
+</html>
