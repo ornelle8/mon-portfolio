@@ -321,3 +321,43 @@ document.addEventListener('mouseenter', () => {
   curseurPoint.style.opacity  = '1';
   curseurCercle.style.opacity = '0.8';
 });
+/* ================================================
+   FORMULAIRE DE CONTACT
+   Au clic sur "Envoyer", ouvre le client email
+   avec les infos pré-remplies.
+================================================ */
+const btnEnvoyer     = document.getElementById('btn-envoyer');
+const contactConfirm = document.getElementById('contact-confirm');
+
+if (btnEnvoyer) {
+  btnEnvoyer.addEventListener('click', () => {
+    const nom     = document.getElementById('nom').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Vérifie que tous les champs sont remplis
+    if (!nom || !email || !message) {
+      alert('Merci de remplir tous les champs !');
+      return;
+    }
+
+    // Construit le lien mailto avec les infos du formulaire
+    const sujet = `Message de ${nom} depuis le portfolio`;
+    const corps = `Nom : ${nom}%0AEmail : ${email}%0A%0AMessage :%0A${message}`;
+    const lienMail = `mailto:joycetifanieboummben@gmail.com?subject=${encodeURIComponent(sujet)}&body=${corps}`;
+
+    // Ouvre le client email
+    window.location.href = lienMail;
+
+    // Affiche le message de confirmation
+    contactConfirm.classList.add('visible');
+
+    // Réinitialise le formulaire après 3 secondes
+    setTimeout(() => {
+      document.getElementById('nom').value     = '';
+      document.getElementById('email').value   = '';
+      document.getElementById('message').value = '';
+      contactConfirm.classList.remove('visible');
+    }, 3000);
+  });
+}

@@ -221,7 +221,7 @@
           aria-label="Voir le projet CinéTicket"
           data-titre="CinéTicket"
           data-desc="Maquette Figma complète d'un système de réservation de cinéma. Conception de l'interface utilisateur avec une attention particulière à l'expérience d'achat de billets : sélection de films, choix des places, récapitulatif de commande. Travail sur l'Auto Layout, les composants réutilisables et le design system."
-          data-lien="https://www.figma.com/design/fniaLOJQsfMTDGoAZoO1bU/cinema?node-id=0-1&t=nb4x6i3y2TqeJiO6-1"
+          data-lien="https://www.figma.com/proto/fniaLOJQsfMTDGoAZoO1bU/cinema?page-id=0%3A1&node-id=28-5&viewport=138%2C160%2C0.13&t=w2vN56L1sjCthhYK-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=28%3A5"
           data-lien-texte="Ouvrir la maquette Figma ↗"
           data-tags="Figma,UI/UX,Prototypage"
         >
@@ -239,30 +239,31 @@
         </article>
 
         <!-- PROJET 2 — Graphes Python -->
-        <article
-          class="projet-carte animer-entree delai-2"
-          role="button"
-          tabindex="0"
-          aria-label="Voir le projet Analyse de match"
-          data-titre="Analyse Osasuna vs FC Barcelone"
-          data-desc="Analyse d'un match de football réel à travers la théorie des graphes. Visualisation des passes, connexions entre joueurs et statistiques de jeu grâce à NetworkX et Matplotlib en Python. Interface graphique avec Tkinter."
-          data-lien="#"
-          data-lien-texte="Voir sur GitHub"
-          data-tags="Python,NetworkX,Matplotlib,Tkinter"
-        >
-          <div class="projet-bandeau sombre" aria-hidden="true">⚽</div>
-          <div class="projet-corps">
-            <div class="projet-tags">
-              <span class="projet-tag">Python</span>
-              <span class="projet-tag">NetworkX</span>
-              <span class="projet-tag">Graphes</span>
-            </div>
-            <h3 class="projet-titre">Analyse de match — Graphes</h3>
-            <p class="projet-desc">Visualisation d'un match de football (Osasuna vs Barça) avec la théorie des graphes en Python.</p>
-            <span class="projet-lien" aria-hidden="true">Voir le projet →</span>
-          </div>
-        </article>
-
+       <!-- PROJET 2 — App Football -->
+<article
+  class="projet-carte animer-entree delai-2"
+  role="button"
+  tabindex="0"
+  aria-label="Voir le projet App Football"
+  data-titre="App Football — Base de données"
+  data-desc="Application desktop développée en Python avec Tkinter et SQLite. Permet la gestion complète d'une base de données football : saisie des joueurs, matchs, passes et tirs. Interface avec onglets, tableau de données, console SQL intégrée et modélisation relationnelle. Projet académique réalisé à l'IUT Douala — Génie Informatique."
+  data-lien="#"
+  data-lien-texte="Projet local — pas encore en ligne"
+  data-tags="Python,Tkinter,SQLite,SQL"
+>
+  <div class="projet-bandeau sombre" aria-hidden="true">⚽</div>
+  <div class="projet-corps">
+    <div class="projet-tags">
+      <span class="projet-tag">Python</span>
+      <span class="projet-tag">Tkinter</span>
+      <span class="projet-tag">SQLite</span>
+      <span class="projet-tag">SQL</span>
+    </div>
+    <h3 class="projet-titre">App Football — Base de données</h3>
+    <p class="projet-desc">Application desktop de gestion d'une base de données football avec interface graphique Tkinter et console SQL intégrée.</p>
+    <span class="projet-lien" aria-hidden="true">Voir le projet →</span>
+  </div>
+</article>
         <!-- PROJET 3 — Flask -->
         <article
           class="projet-carte animer-entree delai-3"
@@ -295,10 +296,10 @@
             tabindex="0"
             aria-label="Voir le projet Petal d'Or"
             data-titre="Pétale d'Or — Boutique en ligne"
-            data-desc="Site e-commerce conçu et développé en HTML, CSS et JavaScript. Projet de vente en ligne avec une identité visuelle florale et élégante, versionné sur GitHub."
-            data-lien="https://github.com/ornelle8/Petal-d_or"
-            data-lien-texte="Voir sur GitHub ↗"
-            data-tags="HTML,CSS,JavaScript,GitHub"
+            data-desc="Site e-commerce conçu et développé en HTML, CSS et JavaScript. Projet de vente en ligne avec une identité visuelle florale et élégante, versionné sur versel."
+            data-lien=petal-d-or-2kpz.vercel.app
+            data-lien-texte="Voir sur versel ↗"
+            data-tags="HTML,CSS,JavaScript,versel"
         >
             <div class="projet-bandeau miel" aria-hidden="true">🌸</div>
             <div class="projet-corps">
@@ -309,7 +310,7 @@
             </div>
             <h3 class="projet-titre">Pétale d'Or</h3>
             </P>Boutique en ligne "Pétale d'Or", identité florale et élégante, développée en HTML/CSS/JS.</P>
-            <span class="projet-lien" aria-hidden="true">Voir sur GitHub →</span>
+            <span class="projet-lien" aria-hidden="true">Voir sur versel →</span>
             </div>
         </article> 
     </div>
@@ -346,26 +347,87 @@
        SECTION CONTACT
   ============================================= -->
   <section id="contact" aria-labelledby="titre-contact">
-    <div class="conteneur">
+  <div class="conteneur">
 
-      <div class="section-entete animer-entree">
-        <span class="section-label">Travaillons ensemble</span>
-        <h2 class="section-titre" id="titre-contact">Me contacter</h2>
+    <div class="section-entete animer-entree">
+      <span class="section-label">Travaillons ensemble</span>
+      <h2 class="section-titre" id="titre-contact">Me contacter</h2>
+    </div>
+
+    <p class="contact-intro animer-entree">
+      Tu as un projet, une question ou une opportunité ?
+      N'hésite pas à m'écrire, je réponds avec plaisir.
+    </p>
+
+    <!-- Grille : email à gauche, formulaire à droite -->
+    <div class="contact-grille animer-entree">
+
+      <!-- Email direct -->
+      <div class="contact-infos">
+        <a href="mailto:joycetifanieboummben@gmail.com"
+           class="contact-email"
+           aria-label="Envoyer un email à Joys Boum Mben">
+          <div class="contact-email-icone" aria-hidden="true">✉️</div>
+          <span>joycetifanieboummben@gmail.com</span>
+        </a>
+        <p class="contact-dispo">
+          ⏱ Je réponds généralement sous 24h
+        </p>
       </div>
 
-      <p class="contact-intro animer-entree">
-        Tu as un projet, une question ou une opportunité ?
-        N'hésite pas à m'écrire, je réponds avec plaisir.
-      </p>
+      <!-- Formulaire -->
+      <!-- action="mailto:..." = envoie directement vers ton email -->
+      <div class="contact-formulaire">
 
-      href="mailto:joycetifanieboummben@gmail.com"
-      class="contact-email animer-entree"
-      aria-label="Envoyer un email à Joys Boum Mben"
->
-      <div class="contact-email-icone">✉️</div>
-      <span class="contact-email-texte">joycetifanieboummben@gmail.com</span>
-</a>
-  </section>
+        <div class="champ-groupe">
+          <label for="nom" class="champ-label">Nom complet</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            class="champ-input"
+            placeholder="Ton nom"
+            required
+          />
+        </div>
+
+        <div class="champ-groupe">
+          <label for="email" class="champ-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="champ-input"
+            placeholder="ton@email.com"
+            required
+          />
+        </div>
+
+        <div class="champ-groupe">
+          <label for="message" class="champ-label">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            class="champ-textarea"
+            placeholder="Dis-moi tout..."
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <button type="button" class="btn-envoyer" id="btn-envoyer">
+          Envoyer le message ✦
+        </button>
+
+        <!-- Message de confirmation (caché par défaut) -->
+        <p class="contact-confirm" id="contact-confirm">
+          ✅ Message envoyé ! Je te réponds très vite.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- ============================================
        PIED DE PAGE
